@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1xbet · 导航参考页</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f4f5f7;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #1e1e2a;
+    }
+
+    /* 深色头图区域 (hero + 顶部导航融合) */
+    .hero-wrapper {
+      background: linear-gradient(145deg, #0b0d17 0%, #1a1e2f 100%);
+      color: #eef0f5;
+      padding: 0 1.5rem 3.5rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 极简导航 */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.2rem 0 0.6rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .logo-area {
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.3px;
+      color: #cbd5e1;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: #a0aec0;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #facc15;
+    }
+
+    /* 深色 hero 内容 */
+    .hero-content {
+      max-width: 1200px;
+      margin: 3rem auto 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-text {
+      flex: 1 1 360px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.3rem;
+      font-weight: 500;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-text h1 span {
+      color: #facc15;
+      font-weight: 600;
+    }
+
+    .hero-text p {
+      font-size: 1.05rem;
+      color: #b6c1d4;
+      max-width: 520px;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(250, 204, 21, 0.12);
+      border-left: 4px solid #facc15;
+      padding: 0.3rem 1rem 0.3rem 0.8rem;
+      border-radius: 2px;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+    }
+
+    .hero-illus {
+      flex: 0 0 200px;
+      text-align: center;
+      opacity: 0.6;
+      font-size: 4rem;
+      line-height: 1;
+      color: #334155;
+    }
+
+    /* 浅色正文区 */
+    .main-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.8rem 1.5rem 3rem 1.5rem;
+    }
+
+    /* 三个场景模块（卡片网格） */
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .scenario-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.04);
+      transition: box-shadow 0.2s, transform 0.15s;
+      border: 1px solid #edf2f7;
+    }
+
+    .scenario-card:hover {
+      box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.08);
+      transform: translateY(-3px);
+    }
+
+    .scenario-card .card-icon {
+      font-size: 1.9rem;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .scenario-card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+
+    .scenario-card p {
+      font-size: 0.95rem;
+      color: #334155;
+      line-height: 1.6;
+    }
+
+    .scenario-card .highlight-link {
+      display: inline-block;
+      margin-top: 0.7rem;
+    }
+
+    .highlight-link a {
+      color: #2563eb;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px dashed #94a3b8;
+    }
+
+    .highlight-link a:hover {
+      border-bottom: 1px solid #2563eb;
+      color: #1e40af;
+    }
+
+    /* 常见说明 (FAQ 摘要) */
+    .faq-summary {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2rem 2.2rem;
+      margin: 2rem 0 1.8rem 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      border: 1px solid #e9edf2;
+    }
+
+    .faq-summary h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      color: #0b0d17;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #edf2f7;
+      padding: 1rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+      color: #1e293b;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      color: #3f4a5e;
+    }
+
+    .faq-item a {
+      color: #2563eb;
+      text-decoration: none;
+      border-bottom: 1px dotted #94a3b8;
+    }
+
+    .faq-item a:hover {
+      border-bottom: 1px solid #2563eb;
+    }
+
+    .inline-reference {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 1.2rem 1.8rem;
+      margin: 1.5rem 0 0.8rem 0;
+      border-left: 8px solid #facc15;
+    }
+
+    .inline-reference p {
+      font-size: 0.95rem;
+      color: #1e293b;
+    }
+
+    .inline-reference a {
+      color: #2563eb;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid #94a3b8;
+    }
+
+    .inline-reference a:hover {
+      border-bottom: 1px solid #1e40af;
+    }
+
+    /* 页脚 */
+    .footer-note {
+      border-top: 1px solid #dce2eb;
+      margin-top: 2.2rem;
+      padding-top: 1.8rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5f6b7a;
+    }
+
+    .footer-note a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    /* 响应式 */
+    @media (max-width: 640px) {
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+      }
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+      .hero-content {
+        margin-top: 1.8rem;
+      }
+      .hero-illus {
+        display: none;
+      }
+      .faq-summary {
+        padding: 1.5rem 1.2rem;
+      }
+      .scenario-grid {
+        gap: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-wrapper {
+        padding: 0 1rem 2.5rem 1rem;
+      }
+      .main-section {
+        padding: 1.8rem 1rem 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero-wrapper">
+    <nav class="navbar">
+      <div class="logo-area">导航·参考</div>
+      <div class="nav-links">
+        <a href="#intro">概述</a>
+        <a href="#scenarios">场景</a>
+        <a href="#faq">说明</a>
+      </div>
+    </nav>
+
+    <div class="hero-content" id="intro">
+      <div class="hero-text">
+        <h1>平台信息速览<br><span>1xbet</span> 对照与延伸</h1>
+        <p>聚合日常查询、模块对照及常见疑问的轻量导航页，方便快速定位关键内容。</p>
+        <div class="hero-badge">参考索引 · 持续更新</div>
+      </div>
+      <div class="hero-illus">
+        ⚡
+      </div>
+    </div>
+  </div>
+
+  <div class="main-section" id="scenarios">
+    <!-- 三个场景模块 -->
+    <div class="scenario-grid">
+      <div class="scenario-card">
+        <span class="card-icon">📋</span>
+        <h3>日常查询</h3>
+        <p>快速检索平台基础信息、服务类别、支持语言与常用功能入口。适用于首次接触或需要核对细节的用户。</p>
+        <div class="highlight-link">
+          <a href="https://root-1xbet.com">1xbet</a> — 直达参考页
+        </div>
+      </div>
+      <div class="scenario-card">
+        <span class="card-icon">🔁</span>
+        <h3>对照与比较</h3>
+        <p>将不同模块、版本或条款进行并列分析，辅助判断差异与适用范围。适合深度使用者横向查阅。</p>
+        <div class="highlight-link">
+          <a href="https://root-1xbet.com">1xbet</a> 对照入口
+        </div>
+      </div>
+      <div class="scenario-card">
+        <span class="card-icon">📖</span>
+        <h3>延伸阅读</h3>
+        <p>聚合周边说明、常见概念及操作指引，提供更完整的上下文。不替代官方文档，但可作为补充索引。</p>
+        <div class="highlight-link">
+          通过 <a href="https://root-1xbet.com">1xbet</a> 获取延伸
+        </div>
+      </div>
+    </div>
+
+    <!-- 常见的说明 / FAQ 摘要 -->
+    <div class="faq-summary" id="faq">
+      <h2>常见说明摘要</h2>
+      <div class="faq-item">
+        <strong>如何理解平台定位？</strong>
+        <p>该站点聚合了与 <a href="https://root-1xbet.com">1xbet</a> 相关的查询、对照与延伸信息，适合作为辅助参考，并非官方主站。</p>
+      </div>
+      <div class="faq-item">
+        <strong>内容更新频率？</strong>
+        <p>依据功能变化与用户反馈进行阶段性调整，保持信息的时效性。建议定期对照官方渠道进行验证。</p>
+      </div>
+      <div class="faq-item">
+        <strong>是否包含所有功能？</strong>
+        <p>本页聚焦于轻量导航和常见场景，不罗列全部功能细节。深度需求建议直接浏览 <a href="https://root-1xbet.com">1xbet</a> 的完整页面。</p>
+      </div>
+    </div>
+
+    <!-- 附加嵌入式参考 (引用 a 标签) -->
+    <div class="inline-reference">
+      <p>如果需要从日常查询、对照比较或延伸阅读的角度深入，可直接使用 <a href="https://root-1xbet.com">1xbet</a> 作为起点。本页面所有链接均指向同一参考源，无第三方跳转。</p>
+    </div>
+
+    <div class="footer-note">
+      <span>此页面为独立导航参考 · 内容仅供参考 · 更多信息请访问 <a href="https://root-1xbet.com">1xbet</a></span>
+    </div>
+  </div>
+
+</body>
+</html>
